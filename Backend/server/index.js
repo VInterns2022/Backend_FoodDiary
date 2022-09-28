@@ -27,7 +27,7 @@ app.post("/nutrition/insert",(req,res)=>{//nutrition
   const calories=req.body.calories
   const time=req.body.time
 
-//patientId  ,no of seervings, units odf servings
+//patientId  ,no of servings, units of servings
 //expressjs
   const sqlInsert="INSERT INTO fooddiary.nutrition (patientId, nameOfItem, servingSize, calories, time) VALUES (?,?,?,?,?)";
   db.query(sqlInsert,[patientId, nameOfItem, servingSize, calories, time],(err,result)=>{
